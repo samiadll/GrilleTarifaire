@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌸 SamiaWebdesigner | Grille Tarifaire</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="page-wrap">
+      <header class="site-header">
+        <h1 class="brand">🌸 SamiaWebdesigner</h1>
+        <p class="tagline">
+          Création de sites & identité visuelle — doux, élégant et efficace
+        </p>
+      </header>
+
+      <main>
+        <!-- SITES WEB -->
+        <section class="section">
+          <h2 class="section-title">🌐 Sites Web</h2>
+
+          <div class="cards">
+            <article class="card" data-animate>
+              <h3>Site vitrine simple</h3>
+              <p class="desc">
+                3 à 5 pages (Accueil, Services, Contact). Design basique +
+                responsive.
+              </p>
+              <p class="price">250 € – 350 €</p>
+            </article>
+
+            <article class="card" data-animate>
+              <h3>Site vitrine complet</h3>
+              <p class="desc">
+                Design plus soigné, SEO léger, formulaire ou prise de
+                rendez-vous.
+              </p>
+              <p class="price">400 € – 500 €</p>
+            </article>
+
+            <article class="card" data-animate>
+              <h3>Boutique e-commerce (Shopify / WooCommerce)</h3>
+              <p class="desc">
+                Configuration boutique, paiement, design basique personnalisé.
+              </p>
+              <p class="price">500 € – 700 €</p>
+            </article>
+
+            <article class="card" data-animate>
+              <h3>E-commerce complet</h3>
+              <p class="desc">
+                Design plus travaillé, sections custom, branding harmonieux.
+              </p>
+              <p class="price">800 € – 900 €</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- BRANDING -->
+        <section class="section">
+          <h2 class="section-title">🎨 Branding & Identité visuelle</h2>
+
+          <div class="cards">
+            <article class="card" data-animate>
+              <h3>Logo simple / signature</h3>
+              <p class="desc">Logo vectoriel minimaliste.</p>
+              <p class="price">50 € – 80 €</p>
+            </article>
+
+            <article class="card" data-animate>
+              <h3>Charte graphique basique</h3>
+              <p class="desc">Logo + palette + typographies.</p>
+              <p class="price">120 € – 200 €</p>
+            </article>
+
+            <article class="card center" data-animate>
+              <h3>Pack “Identité + Site”</h3>
+              <p class="desc">Logo + charte + site vitrine simple.</p>
+              <p class="price">500 € – 700 €</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- SERVICES COMPLÉMENTAIRES -->
+        <section class="section">
+          <h2 class="section-title">⚙️ Services complémentaires</h2>
+
+          <div class="cards">
+            <article class="card" data-animate>
+              <h3>Refonte légère</h3>
+              <p class="desc">Amélioration visuelle d’un site existant.</p>
+              <p class="price">150 € – 300 €</p>
+            </article>
+
+            <article class="card" data-animate>
+              <h3>Maintenance mensuelle</h3>
+              <p class="desc">Mises à jour + petites modifications.</p>
+              <p class="price">30 € – 60 €/mois</p>
+            </article>
+
+            <article class="card" data-animate>
+              <h3>Ajout de page / module</h3>
+              <p class="desc">Section, pop-up, blog, etc.</p>
+              <p class="price">À partir de 30 €</p>
+            </article>
+
+            <article class="card" data-animate>
+              <h3>Formation client (1h)</h3>
+              <p class="desc">Explication gestion du site.</p>
+              <p class="price">40 € – 60 €</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- CONTACT CTA -->
+        <section class="contact-cta">
+          <p class="cta-text">Prêt à travailler ensemble ? 💕</p>
+          <a
+            class="cta-btn"
+            href="https://questionnaireclient.vercel.app/"
+            target="_blank"
+            >Remplir mon questionnaire ✨</a
+          >
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© 2025 🌸 SamiaWebdesigner — Tous droits réservés</p>
+      </footer>
+    </div>
+
+    <!-- Animation à l'apparition -->
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      document
+        .querySelectorAll("[data-animate], .section")
+        .forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>

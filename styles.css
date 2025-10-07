@@ -1,0 +1,152 @@
+/* Fonts & base */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;600&display=swap");
+
+:root {
+  --bg: #fff9f7;
+  --cream: #fff6f5;
+  --rose-100: #f7dfe6;
+  --rose-200: #f3c6d3;
+  --rose-300: #d48aa1;
+  --text: #4a4a4a;
+  --muted: #8d6b78;
+  --card-shadow: 0 12px 30px rgba(212, 138, 161, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* HEADER */
+.site-header {
+  padding: 3rem 1rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--rose-100), var(--bg));
+  border-bottom: 1px solid #f6dbe1;
+}
+.brand {
+  font-family: "Playfair Display", serif;
+  color: var(--rose-300);
+  font-size: 2.4rem;
+  margin: 0;
+}
+.tagline {
+  color: var(--muted);
+  margin-top: 0.35rem;
+}
+
+/* SECTION */
+.section {
+  max-width: 1100px;
+  margin: 2.25rem auto;
+  padding: 0 1.25rem;
+}
+
+/* TITRES */
+.section-title {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  color: var(--rose-300);
+  font-size: 1.9rem;
+  margin: 0 0 1.25rem;
+}
+
+/* GRILLE DES CARTES */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+@media (min-width: 900px) {
+  .cards {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .cards .card {
+    flex: 1 1 30%;
+    max-width: 350px;
+  }
+}
+
+/* STYLE DES CARTES */
+.card {
+  background: #fff9f9;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(212, 123, 138, 0.15);
+  padding: 25px;
+  width: 100%;
+  max-width: 350px;
+  border-top: 5px solid #f4b6c2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(212, 123, 138, 0.25);
+}
+
+.card h3 {
+  color: #c86a7a;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #6f4d4d;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-weight: bold;
+  color: #d47b8a;
+  font-size: 1rem;
+  background: #fff0f3;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(212, 123, 138, 0.1);
+}
+
+/* CTA */
+.contact-cta {
+  text-align: center;
+  margin: 3rem auto;
+}
+.cta-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--rose-300), #eaa3b5);
+  color: #fff;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.cta-btn:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 14px 40px rgba(212, 138, 161, 0.25);
+}
+
+/* FOOTER */
+.site-footer {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid #f4dfe6;
+  background: linear-gradient(180deg, #fff9f9, #fff6f8);
+}
